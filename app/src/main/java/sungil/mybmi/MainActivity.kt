@@ -1,10 +1,10 @@
 package sungil.mybmi
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val heightEditText : EditText = findViewById(R.id.heightEditText)
         val weighteditText : EditText = findViewById(R.id.weighteditText)
         resultButton.setOnClickListener {
-            val intent = Intent(this, ResultActivity::class.java)
+            val intent = Intent(this, ResultActivity::class.java) // 클릭했을시 ResultActivity로 값을 넘겨줌
             intent.putExtra("name", nameEditText.text.toString())
             intent.putExtra("height", heightEditText.text.toString().toInt())
             intent.putExtra("weight", weighteditText.text.toString().toInt())
